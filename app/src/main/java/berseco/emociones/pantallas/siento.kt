@@ -1,9 +1,11 @@
 package berseco.emociones.pantallas
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -17,6 +19,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -75,15 +83,105 @@ fun ContenidoCuerpos(navController: NavController) {
 
         Energia= slidePosition2.toFloat().toInt().toString()
 
+
         when{
 
             Animo=="-1" && Energia=="-1" -> {
-                Text(text = "Apatico:")
 
+
+                Column(modifier = Modifier.background(color = Color(color = 0xFF1E90FF))) {
+                    Text(
+                        text = "Apatico\n ",
+                        fontSize = 30.sp,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+                            .align(Alignment.CenterHorizontally)
+
+                    )
+
+
+                    Text(
+                        text = "La apatía es algo más que no tener ganas de hacer nada." +
+                                " Consiste en una falta de ilusión, de interés y de motivación" +
+                                " generalizada hacia todos los aspectos de la vida de uno." +
+                                " Lo que lleva a quien la padece a sufrir malestar y una" +
+                                " desvinculación de sus emociones.\n",
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+
+                    )
+
+
+                    Text(
+                        text = "¿Cómo actuar?\n",
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+                        .align(Alignment.CenterHorizontally)
+                    )
+
+
+                    Text(
+                        text = "será posible enfrentar la apatía por medio de una serie de medidas." +
+                                " Una de ellas se enfoca a la inserción de cambios graduales" +
+                                " en el día a día. Es decir, realizar pequeñas modificaciones" +
+                                " en las rutinas que constituyan un punto de partida hacia otros" +
+                                " de mayor calado. Por ejemplo, hacer algo de ejercicio o" +
+                                " practicar una alimentación más saludable.",
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+
+                    )
+
+                }
             }
-            Animo=="-1" && Energia=="-2" -> {
-                Text(text = "Aburrido: ")
 
+            Animo=="-1" && Energia=="-2" -> {
+
+                Column(modifier = Modifier.background(color = Color(color = 0xFF1E90FF))) {
+                    Text(
+                        text = "Aburrido\n ",
+                        fontSize = 30.sp,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+                            .align(Alignment.CenterHorizontally)
+
+                    )
+
+
+                    Text(
+                        text = "\n",
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+
+                    )
+
+
+                    Text(
+                        text = "¿Cómo actuar?\n",
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+                            .align(Alignment.CenterHorizontally)
+                    )
+
+
+                    Text(
+                        text = "",
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 15.dp)
+
+                    )
+
+                }
             }
             Animo=="-1" && Energia=="-3" -> {
                 Text(text = "Cansado: ")
